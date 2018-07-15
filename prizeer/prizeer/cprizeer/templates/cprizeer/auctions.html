@@ -1,0 +1,15 @@
+<a href="/cprizeer/room/">back to my room</a>
+
+{% if auctions %}
+	<ul>
+	{% for auction in auctions %}
+		<li>
+			<a href="/cprizeer/enroll/{{ auction.id }}">
+			{{ auction.name }}
+			</a>
+		</li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No auctions</p>
+{% endif %}

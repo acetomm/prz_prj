@@ -1,0 +1,18 @@
+<p>{{ user_name }} deposit: <b>${{ user_deposit }}</b></p>
+
+<a href="/cprizeer/auctions/">auctions</a>
+
+{% if my_enrollings %}
+	<p>My enrollings:</p>
+	<ul>
+	{% for enrolling in my_enrollings %}
+		<li>
+			<a href="/cprizeer/auction/{{ enrolling.auction_id.id }}/">
+			{{ enrolling.auction_id.name }}
+			</a>
+		</li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No enrollings</p>
+{% endif %}

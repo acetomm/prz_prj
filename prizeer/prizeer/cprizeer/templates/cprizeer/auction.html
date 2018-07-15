@@ -1,0 +1,22 @@
+<a href="/cprizeer/room/">back to my room</a>
+
+{% if enrollings %}
+	<p>Auction:</p>
+	<ul>
+	{% for enroll in enrollings %}
+		<li>
+			<!--
+			<a href="/cprizeer/auction/{{ enrolling.auction_id.id }}/">
+			{{ enrolling.auction_id.name }}
+			</a>
+			-->
+			<p>{{ enroll.user_id.username }}</p>
+		</li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No users participate</p>
+{% endif %}
+<a href="/cprizeer/bet/{{ enrollings.0.auction_id.id }}">Bet</a>
+
+
